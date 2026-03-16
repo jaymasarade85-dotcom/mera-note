@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Become a Seller | Notes.in</title>
+    <link rel="stylesheet" href="style-seller.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CE200G8B91"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CE200G8B91');
+</script>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">Notes<span>.in</span></div>
+        <a href="index.html" class="back-home">← मुख्य पेज पर वापस जाएं</a>
+    </header>
+
+    <div class="seller-container">
+        <div class="form-box">
+            <h2>विक्रेता पंजीकरण (Seller Hub)</h2>
+            <p>अपने नोट्स को लाखों छात्रों तक पहुँचाएं और कमाई शुरू करें।</p>
+            <hr>
+
+            <form id="sellerForm" action="https://formspree.io/f/mreyljvd" method="POST">
+                
+                <div class="input-group">
+                    <label>पूरा नाम</label>
+                    <input type="text" name="fullName" id="name" placeholder="अपना नाम लिखें" required>
+                </div>
+
+                <div class="input-group">
+                    <label>WhatsApp नंबर</label>
+                    <input type="tel" name="whatsapp" id="phone" placeholder="91XXXXXXXX" required>
+                </div>
+
+                <div class="input-group">
+                    <label>नोट्स का विषय और कक्षा</label>
+                    <input type="text" name="subject" id="subject" placeholder="उदा: Class 12 Chemistry" required>
+                </div>
+
+                <div class="input-group">
+                    <label>नोट्स का प्रकार</label>
+                    <select name="notesType" id="notesType">
+                        <option value="handwritten">Handwritten (हाथ से लिखे)</option>
+                        <option value="typed">Digital Typed (टाइप किए हुए)</option>
+                        <option value="other">अन्य</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>आपकी अपेक्षित कीमत (प्रति सेल)</label>
+                    <input type="number" name="price" id="price" placeholder="₹ 50" required>
+                </div>
+
+                <div class="input-group">
+                    <label>नोट्स का विवरण / Google Drive लिंक</label>
+                    <textarea name="message" id="message" rows="4" placeholder="अपने नोट्स के बारे में बताएं या सैंपल के लिए Drive लिंक पेस्ट करें" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitBtn">आवेदन जमा करें</button>
+            </form>
+            <div id="formStatus"></div>
+        </div>
+    </div>
+
+    <script src="script-seller.js"></script>
+</body>
+</html>
