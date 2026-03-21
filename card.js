@@ -1,24 +1,3 @@
-
-
-// 1. सर्च फंक्शन (टाइप करते ही काम करेगा)
-function searchBooks() {
-    let input = document.getElementById('searchInput').value.toLowerCase();
-    let cards = document.getElementsByClassName('card');
-
-    for (let i = 0; i < cards.length; i++) {
-        let title = cards[i].querySelector('h3').innerText.toLowerCase();
-        // अगर सर्च शब्द टाइटल में है तो दिखाओ, नहीं तो छुपा दो
-        if (title.includes(input)) {
-            cards[i].style.display = "block";
-        } else {
-            cards[i].style.display = "none";
-        }
-    }
-}
-
-
-
-
 // 1. URL को सही वेरिएबल नाम दें
 const webAppURL = "https://script.google.com/macros/s/AKfycby_BdphCacu9gjrdrc-D3ZvTaQnV6fZshPo7ynvGxb6Tpyn2BP6VUNFXlsc6JNNQRzv/exec"; 
 
@@ -33,8 +12,8 @@ async function fetchNotes() {
 
         notesData.forEach(note => {
             // cardHTML को यहाँ Define करना ज़रूरी है
-            const cardHTML = 
-                `<div class="card">
+            `const cardHTML = 
+                <div class="card">
                     <div class="img-box">
                         <img src="${note.image}" alt="${note.title}">
                     </div>
